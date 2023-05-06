@@ -26,9 +26,6 @@ struct ClipboardVaultApp: App {
                                 }, label: {
                                     Text("Save")
                                 })
-                                .task {
-                                    await clearPasteboard()
-                                }
                             }
                             .padding(.horizontal)
 
@@ -40,9 +37,9 @@ struct ClipboardVaultApp: App {
                     Divider()
                         .padding()
                     
-                    Button() {
+                    Button(action: {
                         copyStoredValueToPasteboard()
-                    } label: {
+                    }, label: {
                         Text("Copy to Clipboard")
                             .padding(.horizontal, 20)
                             .frame(height: 60)
@@ -50,8 +47,11 @@ struct ClipboardVaultApp: App {
                             .background(.blue)
                             .cornerRadius(8)
                             .font(.system(size: 18))
-                    }
+                    })
                     .buttonStyle(.plain)
+                    .task {
+                        await clearPasteboard()
+                    }
     
                     
                     Divider()
