@@ -14,6 +14,7 @@
 		E42A178A2A05EA840046A68B /* ClipboardVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A17892A05EA840046A68B /* ClipboardVaultTests.swift */; };
 		E42A17942A05EA840046A68B /* ClipboardVaultUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A17932A05EA840046A68B /* ClipboardVaultUITests.swift */; };
 		E42A17962A05EA840046A68B /* ClipboardVaultUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A17952A05EA840046A68B /* ClipboardVaultUITestsLaunchTests.swift */; };
+		E42A17A42A05EDB20046A68B /* EncryptedAppStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E42A17A32A05EDB20046A68B /* EncryptedAppStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42A17A42A05EDB20046A68B /* EncryptedAppStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = ClipboardVault;
+			packageProductDependencies = (
+				E42A17A32A05EDB20046A68B /* EncryptedAppStorage */,
+			);
 			productName = ClipboardVault;
 			productReference = E42A17742A05EA810046A68B /* ClipboardVault.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = E42A176B2A05EA810046A68B;
+			packageReferences = (
+				E42A17A22A05EDB20046A68B /* XCRemoteSwiftPackageReference "EncryptedAppStorage" */,
+			);
 			productRefGroup = E42A17752A05EA810046A68B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -422,6 +430,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ClipboardVault/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,6 +456,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ClipboardVault/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,6 +578,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E42A17A22A05EDB20046A68B /* XCRemoteSwiftPackageReference "EncryptedAppStorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/khuong291/EncryptedAppStorage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E42A17A32A05EDB20046A68B /* EncryptedAppStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E42A17A22A05EDB20046A68B /* XCRemoteSwiftPackageReference "EncryptedAppStorage" */;
+			productName = EncryptedAppStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E42A176C2A05EA810046A68B /* Project object */;
 }

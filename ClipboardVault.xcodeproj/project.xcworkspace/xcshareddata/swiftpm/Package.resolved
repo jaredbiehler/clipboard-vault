@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "encryptedappstorage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/khuong291/EncryptedAppStorage.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5c3a0e59c9b77b561cfe6eff26828d7050ed6652"
+      }
+    }
+  ],
+  "version" : 2
+}
